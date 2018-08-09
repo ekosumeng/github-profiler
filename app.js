@@ -11,9 +11,23 @@ const options = {
 	}
 
 }
+// Todo: [x] Read the data
+let request = https.request(options, (response) => {
+	let body =''
+	response.on('data', (data) =>{
+		body = body + data
+	})
+	response.on('end', () =>{
+		console.log(typeof body);
+		// console.log(body);
 
-let request = https.request(options, (result) =>{
-	console.log('Got response: ', result.statusCode)
+	})
+
+// ToDo: Parse the data
+// Convert String ti JSON (JavaScript object)
+// Todo: Print the data out
+
+	// console.log('Got response: ', response)
 })
 
 request.end()
@@ -23,6 +37,5 @@ request.on('error', (e) => {
 })
 
 
-// Todo: Read the data
-// ToDo: Parse the data
-// Todo: Print the data out
+
+
