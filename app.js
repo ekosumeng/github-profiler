@@ -22,13 +22,11 @@ let request = https.request(options, (response) => {
 	// ToDo: [x] Parse the data
 	// Convert String ti JSON (JavaScript object)
 	let profile = JSON.parse(body)
-	console.log(profile.name);
-
+	// Todo:[x] Print the data out
+	// console.log(profile.login + 'owns' + profile.name + 'name');
+	// Cara Yanng Peraktis
+	console.log(`${profile.login} owns ${profile.name} Name And has ${profile.followers} followers`);
 	})
-
-
-// Todo: Print the data out
-
 
 })
 
