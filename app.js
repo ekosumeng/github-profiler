@@ -1,6 +1,3 @@
-// Problem: We need a simple to look at GitHub Profile
-// Solusi : Use NodeJS to connect to GitHub API to get Profile info and print out to the console
-
 // ToDo: [x] Connect to GitHub API
 let https = require('https');
 
