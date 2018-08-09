@@ -18,16 +18,18 @@ let request = https.request(options, (response) => {
 		body = body + data
 	})
 	response.on('end', () =>{
-		console.log(typeof body);
-		// console.log(body);
+
+	// ToDo: [x] Parse the data
+	// Convert String ti JSON (JavaScript object)
+	let profile = JSON.parse(body)
+	console.log(profile.name);
 
 	})
 
-// ToDo: Parse the data
-// Convert String ti JSON (JavaScript object)
+
 // Todo: Print the data out
 
-	// console.log('Got response: ', response)
+
 })
 
 request.end()
